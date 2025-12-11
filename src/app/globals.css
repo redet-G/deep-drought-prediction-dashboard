@@ -208,13 +208,25 @@
   font-size: 12px !important;
   padding: 6px 8px !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-  z-index: 1000 !important;
+  z-index: 3000 !important;
+  position: relative !important;
 }
 
 .dark .spei-tooltip {
   background: rgba(17, 24, 39, 0.95) !important;
   border: 2px solid #3b82f6 !important;
   color: #f9fafb !important;
+}
+
+/* Ensure Leaflet tooltip pane and tooltips are above all map elements */
+.leaflet-tooltip-pane,
+.leaflet-tooltip-pane * {
+  z-index: 3000 !important;
+}
+
+.leaflet-tooltip {
+  z-index: 3000 !important;
+  position: absolute !important;
 }
 
 /* Dark mode contrast improvements specifically for Data & Reports sections */
