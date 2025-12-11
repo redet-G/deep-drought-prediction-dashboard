@@ -150,7 +150,7 @@ export function DroughtMap({ region, woreda, disableInteraction, onSelectWoreda,
            if (mapInstance.current && !(mapInstance.current as any)._panes?.tooltipPane) {
              mapInstance.current.createPane('tooltipPane')
              const pane = (mapInstance.current.getPane('tooltipPane') as any)
-             if (pane) pane.style.zIndex = 1000 // highest layer for tooltips
+             if (pane) pane.style.zIndex = 3000 // highest layer for tooltips - above everything on map
            }
          } catch {}
         setMapReady(true)
